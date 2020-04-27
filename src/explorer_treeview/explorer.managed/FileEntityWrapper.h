@@ -6,19 +6,19 @@
 
 using namespace System;
 
-namespace Explorer 
+namespace Explorer
 {
-	public ref class FileEntityWrapper : public FileEntityBaseWrapper
-	{		
-	public:		
-		FileEntityWrapper(String^ path);
+    public ref class FileEntityWrapper : public FileEntityBaseWrapper
+    {
+    public:
+        FileEntityWrapper(String^ path);
 
-		property String^ Extension 
-		{
-			String^ get();
-		}
+        property String^ Extension
+        {
+            String^ get();
+        }
 
-	internal:
-		FileEntityWrapper(explorer::FileEntity* entity);
-	};
+    internal:
+        FileEntityWrapper(explorer::FileEntity* entity);
+    };
 }

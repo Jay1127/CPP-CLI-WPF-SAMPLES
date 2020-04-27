@@ -3,26 +3,26 @@
 
 using namespace System;
 
-namespace Explorer 
+namespace Explorer
 {
-	public ref class FileEntityBaseWrapper
-	{
-	public:
-		property String^ Name 
-		{
-			String^ get();
-		}
+    public ref class FileEntityBaseWrapper
+    {
+    public:
+        property String^ Name
+        {
+            String^ get();
+        }
 
-		property String^ Path 
-		{
-			String^ get();
-		}
+        property String^ Path
+        {
+            String^ get();
+        }
 
-	protected:
-		FileEntityBaseWrapper(explorer::FileEntityBase* entity);
-		~FileEntityBaseWrapper();
+    protected:
+        FileEntityBaseWrapper(explorer::FileEntityBase* entity);
+        ~FileEntityBaseWrapper();
 
-		explorer::FileEntityBase* entity;
-	};
+        explorer::FileEntityBase* entity;
+    };
 }
 

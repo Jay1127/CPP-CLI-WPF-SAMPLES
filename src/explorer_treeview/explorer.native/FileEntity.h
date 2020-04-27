@@ -2,14 +2,14 @@
 #include "stdafx.h";
 #include "FileEntityBase.h"
 
-namespace explorer 
+namespace explorer
 {
-	class FileEntity : public FileEntityBase
-	{
-	public:
-		FileEntity(const string file_path);		
+    class FileEntity : public FileEntityBase
+    {
+    public:
+        FileEntity(const string file_path);
 
-		string extension() const;
-	};
+        string extension() const;
+    };
 }
 
