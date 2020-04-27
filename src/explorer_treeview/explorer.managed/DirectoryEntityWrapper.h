@@ -5,21 +5,25 @@
 #include "FileEntityBaseWrapper.h"
 #include "FileEntityWrapper.h"
 
-namespace Explorer {
+namespace Explorer 
+{
 	public ref class DirectoryEntityWrapper : public FileEntityBaseWrapper
 	{
 	public:
 		DirectoryEntityWrapper(String^ path);
 
-		property cli::array<FileEntityBaseWrapper^>^ SubEntries {
+		property cli::array<FileEntityBaseWrapper^>^ SubEntries 
+		{
 			cli::array<FileEntityBaseWrapper^>^ get();
 		}
 
-		property cli::array<FileEntityWrapper^>^ SubFiles {
+		property cli::array<FileEntityWrapper^>^ SubFiles 
+		{
 			cli::array<FileEntityWrapper^>^ get();
 		}
 
-		property cli::array<DirectoryEntityWrapper^>^ SubDirectories {
+		property cli::array<DirectoryEntityWrapper^>^ SubDirectories 
+		{
 			cli::array<DirectoryEntityWrapper^>^ get();
 		}
 

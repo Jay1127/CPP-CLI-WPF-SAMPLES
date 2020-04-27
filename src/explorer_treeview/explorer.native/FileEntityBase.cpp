@@ -2,6 +2,7 @@
 #include "FileEntityBase.h"
 
 namespace explorer {
+
 	FileEntityBase::FileEntityBase(const string entry_path)
 		: m_entry(filesystem::directory_entry(entry_path))
 	{

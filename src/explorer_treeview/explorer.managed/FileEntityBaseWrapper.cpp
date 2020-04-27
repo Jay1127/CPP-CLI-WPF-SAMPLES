@@ -2,7 +2,8 @@
 #include "FileEntityBaseWrapper.h"
 #include "ManagedAdapter.h"
 
-namespace Explorer {
+namespace Explorer 
+{
 	FileEntityBaseWrapper::FileEntityBaseWrapper(explorer::FileEntityBase* entity)
 		: entity(entity)
 	{

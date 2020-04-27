@@ -2,7 +2,8 @@
 #include "stdafx.h";
 #include "FileEntityBase.h"
 
-namespace explorer {
+namespace explorer 
+{
 	class FileEntity : public FileEntityBase
 	{
 	public:

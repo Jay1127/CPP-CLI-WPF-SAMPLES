@@ -5,7 +5,8 @@
 #include "FileEntityBase.h"
 #include "FileEntity.h"
 
-namespace explorer {
+namespace explorer 
+{
 	class DirectoryEntity : public FileEntityBase
 	{
 	public:		

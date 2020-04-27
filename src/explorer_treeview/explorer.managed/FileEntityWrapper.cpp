@@ -2,7 +2,8 @@
 #include "FileEntityWrapper.h"
 #include "ManagedAdapter.h"
 
-namespace Explorer {
+namespace Explorer 
+{
 	FileEntityWrapper::FileEntityWrapper(String^ path)
 		: FileEntityBaseWrapper(new explorer::FileEntity(NnMHandler::NativeAdapter::ToString(path)))
 	{

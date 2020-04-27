@@ -1,7 +1,8 @@
 #pragma once
 #include "stdafx.h"
 
-namespace explorer {
+namespace explorer 
+{
 	class FileEntityBase
 	{
 	public:

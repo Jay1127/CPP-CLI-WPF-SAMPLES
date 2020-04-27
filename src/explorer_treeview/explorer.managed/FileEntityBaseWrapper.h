@@ -3,15 +3,18 @@
 
 using namespace System;
 
-namespace Explorer {
+namespace Explorer 
+{
 	public ref class FileEntityBaseWrapper
 	{
 	public:
-		property String^ Name {
+		property String^ Name 
+		{
 			String^ get();
 		}
 
-		property String^ Path {
+		property String^ Path 
+		{
 			String^ get();
 		}
 

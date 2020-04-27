@@ -6,13 +6,15 @@
 
 using namespace System;
 
-namespace Explorer {
+namespace Explorer 
+{
 	public ref class FileEntityWrapper : public FileEntityBaseWrapper
 	{		
 	public:		
 		FileEntityWrapper(String^ path);
 
-		property String^ Extension {
+		property String^ Extension 
+		{
 			String^ get();
 		}
 

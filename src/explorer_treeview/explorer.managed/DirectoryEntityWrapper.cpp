@@ -2,7 +2,8 @@
 #include "DirectoryEntityWrapper.h"
 #include "ManagedAdapter.h"
 
-namespace Explorer {
+namespace Explorer 
+{
 	DirectoryEntityWrapper::DirectoryEntityWrapper(String^ path)
 		: FileEntityBaseWrapper(new explorer::DirectoryEntity(NnMHandler::NativeAdapter::ToString(path)))
 	{
@@ -27,10 +28,12 @@ namespace Explorer {
 			{
 				auto path = sub_entries[i].path();
 
-				if (std::filesystem::is_directory(path)) {
+				if (std::filesystem::is_directory(path)) 
+				{
 					m_entries[i] = gcnew DirectoryEntityWrapper(NnMHandler::ManagedAdapter::ToString(sub_entries[i].path()));
 				}
-				else {
+				else 
+				{
 					m_entries[i] = gcnew FileEntityWrapper(NnMHandler::ManagedAdapter::ToString(sub_entries[i].path()));
 				}
 			}

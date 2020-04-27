@@ -2,6 +2,7 @@
 #include "DirectoryEntity.h"
 
 namespace explorer {
+
 	DirectoryEntity::DirectoryEntity(const string directory_path)
 		: FileEntityBase(directory_path)
 	{
@@ -11,22 +12,29 @@ namespace explorer {
 	vector<FileEntityBase> DirectoryEntity::sub_entries() const
 	{
 		std::vector<FileEntityBase> entries;
-		try {
-			for (auto entry : filesystem::directory_iterator(path())) {
-				try {
-					if (entry.is_directory()) {
+		try
+		{
+			for (auto entry : filesystem::directory_iterator(path())) 
+			{
+				try
+				{
+					if (entry.is_directory()) 
+					{
 						entries.push_back(DirectoryEntity(entry.path().string()));
 					}
-					else {
+					else 
+					{
 						entries.push_back(FileEntity(entry.path().string()));
 					}
 				}
-				catch (exception e) {
+				catch (exception e) 
+				{
 
 				}
 			}
 		}
-		catch (exception e) {
+		catch (exception e) 
+		{
 
 		}
 
@@ -37,13 +45,17 @@ namespace explorer {
 	{
 		std::vector<FileEntity> entries;
 
-		for (auto entry : filesystem::directory_iterator(path())) {
-			try {
-				if (!entry.is_directory()) {
+		for (auto entry : filesystem::directory_iterator(path())) 
+		{
+			try 
+			{
+				if (!entry.is_directory()) 
+				{
 					entries.push_back(FileEntity(entry.path().string()));
 				}
 			}
-			catch (exception e) {
+			catch (exception e)
+			{
 
 			}
 		}
@@ -55,13 +67,17 @@ namespace explorer {
 	{
 		std::vector<DirectoryEntity> entries;
 
-		for (auto entry : filesystem::directory_iterator(path())) {
-			try {
-				if (entry.is_directory()) {
+		for (auto entry : filesystem::directory_iterator(path())) 
+		{
+			try 
+			{
+				if (entry.is_directory()) 
+				{
 					entries.push_back(DirectoryEntity(entry.path().string()));
 				}
 			}
-			catch (exception e) {
+			catch (exception e) 
+			{
 
 			}
 		}
